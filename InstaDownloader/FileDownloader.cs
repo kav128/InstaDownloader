@@ -6,9 +6,11 @@ namespace InstaDownloader
     {
         public static void Download(string URL, string Dest)
         {
+            string[] splURL = URL.Split('/');
+            string filename = splURL[splURL.Length - 1];
             using (WebClient wc = new WebClient())
             {
-                wc.DownloadFile(URL, Dest);
+                wc.DownloadFile(URL, Dest + (Dest.EndsWith("\\") || Dest.Length == 0 ? "" : "\\") + filename);
             }
         }
     }
