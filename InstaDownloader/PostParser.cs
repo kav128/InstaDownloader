@@ -9,7 +9,7 @@ namespace InstaDownloader
     {
         GraphImage, GraphVideo, GraphSidecar
     }
-    static class InstaParser
+    static class PostParser
     {
         public static string GetJsonFromPost(string PostId)
         {
