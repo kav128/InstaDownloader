@@ -9,12 +9,13 @@ namespace InstaDownloader
     {
         GraphImage, GraphVideo, GraphSidecar
     }
+
     static class PostParser
     {
-        public static string GetJsonFromPost(string PostId)
+        public static string GetJsonFromPost(string PostUrl)
         {
             string result;
-            var req = (HttpWebRequest)WebRequest.Create(string.Format("https://www.instagram.com/p/{0}/", PostId));
+            var req = (HttpWebRequest)WebRequest.Create(PostUrl);
             req.AllowAutoRedirect = false;
             using (var rsp = req.GetResponse())
             {
@@ -26,7 +27,6 @@ namespace InstaDownloader
                     result = hnc[0].InnerText;
                 }
             }
-            ;
             return result.Remove(result.Length - 1, 1).Remove(0, result.IndexOf('{'));
         }
 

@@ -49,6 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileDownloader.cs" />
+    <Compile Include="InstaMedia.cs" />
+    <Compile Include="InstaPhoto.cs" />
+    <Compile Include="InstaPost.cs" />
+    <Compile Include="InstaVideo.cs" />
     <Compile Include="PostParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
