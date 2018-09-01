@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using InstaCore;
 using System;
 
 namespace InstaDownloader
